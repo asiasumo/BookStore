@@ -1,40 +1,30 @@
 package pl.jwoj.controller;
 
-import pl.jwoj.facade.BookshelfFacade;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pl.jwoj.config.exceptions.BookNotFoundException;
+import pl.jwoj.domain.Book;
+import pl.jwoj.services.BookService;
 
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("/books")
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookController {
 
-	BookshelfFacade api;
-
 	@Autowired
-	public BookController(BookshelfFacade api) {
-		this.api = api;
+	BookService bookService;
+
+	@PostMapping("/create")
+	public Book createBook(Book book) {
+		return bookService.createBook(book);
 	}
 
-	//http://localhost:8080/api/books/
-
-	@PatchMapping("/price")
-	public void addPrice(@RequestBody AddPriceCommand command) {
-		api.addPrice(command);
-	}
-	@PatchMapping("/description")
-	public void addDescription(@RequestBody AddDescriptionCommand command) {
-		api.addDescription(command);
-	}
-	@PatchMapping("/sale")
-	public void putOnSale(@RequestBody PutOnSaleCommand command) {
-		api.putOnSale(command);
-	}
-	@PatchMapping("/cover")
-	public void addCover(@RequestBody AddCoverCommand command) {
-		api.addCover(command);
+	@GetMapping("/{isbn}")
+	public Book getBookByISBN(@PathVariable("isbn") String isbn) throws BookNotFoundException {
+		return bookService.getBookByISBN(isbn);
 	}
 
 }
