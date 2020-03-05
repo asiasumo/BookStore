@@ -17,7 +17,7 @@ import java.util.List;
 public class BookController {
 
 	@Autowired
-	BookService bookService;
+	private BookService bookService;
 
 	@PostMapping("/create")
 	public Book createBook(@RequestBody Book book) {

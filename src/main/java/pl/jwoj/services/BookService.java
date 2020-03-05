@@ -13,7 +13,7 @@ import java.util.List;
 public class BookService {
 
 	@Autowired
-	BookshelfStorage bookshelfStorage;
+	private BookshelfStorage bookshelfStorage;
 
 	public Book createBook(Book book) {
 		return bookshelfStorage.createBook(book);
