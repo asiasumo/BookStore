@@ -123,6 +123,7 @@ const CART = {
         });
 
         function showCart(){
+            let sum = 0;
             let cartSection = document.getElementById('cart');
             cart.innerHTML = '';
             let s = CART.sort('qty');
@@ -160,11 +161,16 @@ const CART = {
                 let cost = new Intl.NumberFormat('pl',
                                 {style: 'currency', currency:'PLN'}).format(item.qty * item.itemPrice);
                 price.textContent = cost;
+                sum += item.qty * item.itemPrice;
                 cartitem.appendChild(price);
 
                 cartSection.appendChild(cartitem);
             })
-        }
+            let cartSum = document.createElement('div');
+            cartSum.className ='price';
+            cartSum.textContent = "Suma: " + new Intl.NumberFormat('pl', {style: 'currency', currency:'PLN'}).format(sum);
+            cartSection.appendChild(cartSum);
+1        }
 
         function incrementCart(ev){
             ev.preventDefault();
@@ -178,6 +184,7 @@ const CART = {
             }else{
                 document.getElementById('cart').removeChild(controls.parentElement);
             }
+            showCart();
         }
 
         function decrementCart(ev){
@@ -192,6 +199,7 @@ const CART = {
             }else{
                 document.getElementById('cart').removeChild(controls.parentElement);
             }
+            showCart();
         }
 
         function getProducts(success, failure){
@@ -235,7 +243,7 @@ const CART = {
                 card.appendChild(title);
                 //add the description to the card
                 let desc = document.createElement('p');
-                desc.textContent = product.desc;
+                desc.textContent = product.description;
                 card.appendChild(desc);
                 //add the button to the card
                 let btn = document.createElement('button');
