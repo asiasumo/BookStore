@@ -1,4 +1,4 @@
-package pl.jwoj.domain;
+package pl.jwoj.productCatalog.domain;
 
 import lombok.Data;
 

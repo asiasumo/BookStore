@@ -1,5 +1,9 @@
-package pl.jwoj.controller;
+package pl.jwoj.productCatalog.controller;
 
+import pl.jwoj.controller.AddCoverCommand;
+import pl.jwoj.controller.AddDescriptionCommand;
+import pl.jwoj.controller.AddPriceCommand;
+import pl.jwoj.controller.PutOnSaleCommand;
 import pl.jwoj.facade.BookshelfFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PatchMapping;

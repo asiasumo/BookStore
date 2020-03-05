@@ -4,7 +4,7 @@ import pl.jwoj.controller.AddCoverCommand;
 import pl.jwoj.controller.AddDescriptionCommand;
 import pl.jwoj.controller.AddPriceCommand;
 import pl.jwoj.controller.PutOnSaleCommand;
-import pl.jwoj.storage.BookshelfStorage;
+import pl.jwoj.productCatalog.storage.BookshelfStorage;
 
 public class BookShelfFacadeImp implements BookshelfFacade {
 

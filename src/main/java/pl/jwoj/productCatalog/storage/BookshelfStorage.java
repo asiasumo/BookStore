@@ -1,6 +1,6 @@
-package pl.jwoj.storage;
+package pl.jwoj.productCatalog.storage;
 
-import pl.jwoj.domain.Book;
+import pl.jwoj.productCatalog.domain.Book;
 
 import java.util.concurrent.ConcurrentHashMap;
 
