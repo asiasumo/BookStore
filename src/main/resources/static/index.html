@@ -1,18 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Title</title>
-</head>
-<body>
-    <script src="js/scripts.js"></script>
-    <header>
-        <h1>Książkolandia</h1>
-    </header>
-    <main>
-        <section id="products"></section>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>E-Książka</title>
+        <script src="https://kit.fontawesome.com/1fe6e44c32.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-center">
+                <span class="nav-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <img src="E-Książka.png" alt="e-store logo">
+                <div class="cart-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <div class="cart-items">0</div>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="banner">
+                <h1 class="banner-title">Kolekcja E-booków</h1>
+                <button class="banner-btn">Zacznij Zakupy</button>
+            </div>
+        </header>
+        <section class="products">
+            <div class="section-title">
+                <h2>Nasze E-booki</h2>
+            </div>
+            <div class="products-center"></div>
+        </section>
+        <div class="cart-overlay">
+            <div class="cart">
+                <span class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>Twój Koszyk</h2>
+            </div>
+            <div class="cart-content">
+                <div class="cart-item">
+                    <img src="" alt="product">
+                    <div>
+                        <h4>AA</h4>
+                        <h5>BB zł</h5>
+                        <span class="remove-item">usuń</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-chevron-up"></i>
+                        <p class="item-amount">1</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="cart-footer">
+                        <h3>Suma Koszyka: <span class="cart-total">0</span> zł</h3>
+                        <button class="clear-cart banner-btn">Wyczyść koszyk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/app.js"></script>
         <section id="cart"></section>
-    </main>
-</body>
+    </body>
 </html>

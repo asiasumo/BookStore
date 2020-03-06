@@ -1,21 +1,21 @@
 [
   {
-  "isbn": "978-83-7686-307-8",
-  "id": 1,
-  "description": "Imperium grozi niebezpieczeństwo. Żądne krwi hordy orków wypowiadają wojnę jego mieszkańcom. Dostrzegając zagrożenie, Elfy z północy zawiązują niełatwy sojusz z mieszkańcami Imperium. Nawet będące w sporze z ludźmi krasnoludy przyłączają się do walki.",
-  "title": "Summoner: The Novice",
-  "author": "Taran Matharu",
-  "price": 39.99,
-  "cover": "https://wydawnictwo-jaguar.pl/wp-content/uploads/2015/08/1-Taran-Matharu-_SUMMONER_POCZATEK-300-dpi-RGB1-e1538453497877-134x200.jpg",
-  "onSale": true
+    "isbn": "978-83-7686-307-8",
+    "id": 1,
+    "description": "Imperium grozi niebezpieczeństwo. Żądne krwi hordy orków wypowiadają wojnę jego mieszkańcom. Dostrzegając zagrożenie, Elfy z północy zawiązują niełatwy sojusz z mieszkańcami Imperium. Nawet będące w sporze z ludźmi krasnoludy przyłączają się do walki.",
+    "title": "Summoner: The Novice",
+    "author": "Taran Matharu",
+    "price": 39.99,
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51RpC4jwjJL._SX331_BO1,204,203,200_.jpg",
+    "onSale": true
   },{
     "isbn": "978-83-7686-446-4",
     "id": 2,
     "description": "Sądzony za zbrodnię, której nie popełnił, Fletcher musi stawić czoła niesprawiedliwej Inkwizycji oraz wziąć udział w ważnej dla bezpieczeństwa królestwa misji zleconej przez samego króla Hominum. Wyprawa prowadzi na terytorium Orków, gdzie nic nie jest tym, czym się wydaje. Dodatkowo wśród członków wyprawy czai się zdrajca.",
     "title": "Summoner: The Inquisition",
     "author": "Taran Matharu",
-    "price": 42.50,
-    "cover": "https://wydawnictwo-jaguar.pl/wp-content/uploads/2016/04/1-Taran-Matharu-_SUMMONER_WYPRAWA-300-dpi-RGB-134x200.jpg",
+    "price": 42.59,
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51yXUjU6QeL._SX331_BO1,204,203,200_.jpg",
     "onSale": true
   },
   {
@@ -25,17 +25,17 @@
     "title": "Summoner: Battlemage",
     "author": "Taran Matharu",
     "price": 25,
-    "cover": "https://wydawnictwo-jaguar.pl/wp-content/uploads/2017/07/3-Taran-Matharu-_SUMMONER_Bitwa-300-dpi-RGB-132x200.jpg",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51HWTfZtsqL._SX331_BO1,204,203,200_.jpg",
     "onSale": false
   },
   {
     "isbn": "978-83-7686-732-8",
     "id": 4,
-    "description": " Zanim jeszcze ma szansę poszukać przyjaciół, niespodziewanie trafia w sam środek przygody, która zaprowadzi go w serce orkowych dżungli, gdzie sojusze i animozje przestają być oczywiste. Arcturus, sierota z niedawno odkrytym talentem magicznym, staje przed wyborem – po czyjej stronie się opowiedzieć… Ceną może być rozpad całego królestwa. Tessa i Cole, każde w innym mieście, muszą odnaleźć własne drogi w zmieniającej się rzeczywistości. Z pomocą starych przyjaciół, zwariowanej Nany, przyrodnich braci i złośliwych współpracowników, przygotowują się na wspólne wkroczenie w dorosłość.",
+    "description": " Prequel trylogii Summoner",
     "title": "Summoner: The Outcast",
     "author": "Taran Matharu",
     "price": 40,
-    "cover": "https://wydawnictwo-jaguar.pl/wp-content/uploads/2018/10/4-Taran-Matharu-_SUMMONER_Rebelia-300-dpi-RGB-e1538452735590-134x200.jpg",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51m4f5RabFL._SX329_BO1,204,203,200_.jpg",
     "onSale": true
   }
 ]
