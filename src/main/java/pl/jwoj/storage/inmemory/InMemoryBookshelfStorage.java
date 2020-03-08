@@ -1,17 +1,16 @@
-package pl.jwoj.storage;
+package pl.jwoj.storage.inmemory;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
-import pl.jwoj.config.exceptions.BookNotFoundException;
 import pl.jwoj.domain.Book;
+import pl.jwoj.storage.BookshelfStorage;
 
-import javax.swing.text.html.Option;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -42,12 +41,12 @@ public class InMemoryBookshelfStorage implements BookshelfStorage {
 	}
 
 	@Override
-	public Book getBookByISBN(String isbn) throws BookNotFoundException {
-		Book result = books.get(isbn);
-		if(result == null) {
-			throw new BookNotFoundException();
-		}
-		return result;
+	public List<Book> getBooksByISBN(String isbn) {
+		return books.values()
+				.stream()
+				.map(book -> book.getIsbn().equals(isbn) ? book : null)
+				.filter(Objects::nonNull)
+				.collect(Collectors.toList());
 	}
 
 	@Override
