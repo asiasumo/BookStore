@@ -16,7 +16,7 @@ public class Book {
 	private String author;
 	private float price;
 	private String cover;
-	@JsonIgnore private boolean isOnSale;
+	private boolean isOnSale;
 
 }
 
