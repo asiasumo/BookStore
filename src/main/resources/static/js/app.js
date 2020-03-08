@@ -174,7 +174,6 @@ class UI{
     }
     getSingleButton(id){
         return buttonsDOM.find(button => button.dataset.id === id);
-
     }
 }
 //local storage
