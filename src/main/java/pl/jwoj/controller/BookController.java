@@ -30,8 +30,8 @@ public class BookController {
 	}
 
 	@GetMapping("/{isbn}")
-	public Book getBookByISBN(@PathVariable("isbn") String isbn) throws BookNotFoundException {
-		return bookService.getBookByISBN(isbn);
+	public List<Book> getBooksByISBN(@PathVariable("isbn") String isbn) throws BookNotFoundException {
+		return bookService.getBooksByISBN(isbn);
 	}
 
 	@GetMapping("/all")

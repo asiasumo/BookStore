@@ -19,8 +19,8 @@ public class BookService {
 		return bookshelfStorage.createBook(book);
 	}
 
-	public Book getBookByISBN(String isbn) {
-		return bookshelfStorage.getBookByISBN(isbn);
+	public List<Book> getBooksByISBN(String isbn) {
+		return bookshelfStorage.getBooksByISBN(isbn);
 	}
 
 	public List<Book> getAllBooks() {
