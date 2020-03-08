@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pl.jwoj.services.BookService;
 import pl.jwoj.storage.BookshelfStorage;
-import pl.jwoj.storage.InMemoryBookshelfStorage;
+import pl.jwoj.storage.persistent.PersistentBookStorage;
 
 @Configuration
 public class BookShelfConfig {
@@ -17,7 +17,7 @@ public class BookShelfConfig {
 
 	@Bean
 	public BookshelfStorage bookshelfStorage() {
-		return new InMemoryBookshelfStorage();
+		return new PersistentBookStorage();
 	}
 
 }

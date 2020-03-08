@@ -7,10 +7,9 @@ import java.util.List;
 
 public interface BookshelfStorage {
 
-
 	Book createBook(Book book);
 
-	Book getBookByISBN(String isbn) throws BookNotFoundException;
+	List<Book> getBooksByISBN(String isbn) throws BookNotFoundException;
 
 	List<Book> getAllBooks();
 

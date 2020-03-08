@@ -1,4 +1,4 @@
-package pl.jwoj.storage;
+package pl.jwoj.storage.inmemory;
 
 import org.springframework.stereotype.Repository;
 import pl.jwoj.domain.Transaction;
