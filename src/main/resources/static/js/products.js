@@ -10,7 +10,7 @@ class Products{
         let products = data;
         return products;
         }catch (error){
-            console.log(error);
+            console.error(error);
         }
     }
 }
