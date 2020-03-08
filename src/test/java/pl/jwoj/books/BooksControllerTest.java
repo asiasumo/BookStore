@@ -36,13 +36,13 @@ public class BooksControllerTest {
 	public void isBookCreated() {
 		List<Transaction> transactions = new ArrayList();
 
-		Book book = new Book("2","9788328073357","A road to the happy life",
+		Book book = new Book("222","9788328073357","A road to the happy life",
 				"Happy life","Mike Prets",32.99f,
 				"https://s.lubimyczytac.pl/upload/books/4459000/4459056/761451-352x500.jpg",true, transactions);
 
 		Book createdBook = bookService.createBook(book);
 
-		Assert.assertEquals(book, createdBook);
+		Assert.assertEquals(book.getId(), createdBook.getId());
 
 	}
 
