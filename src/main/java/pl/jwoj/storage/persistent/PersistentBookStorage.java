@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.jwoj.config.exceptions.BookNotFoundException;
 import pl.jwoj.domain.Book;
-import pl.jwoj.storage.BookRepository;
+import pl.jwoj.storage.repositories.BookRepository;
 import pl.jwoj.storage.BookshelfStorage;
 
 import java.io.IOException;
@@ -23,8 +23,7 @@ public class PersistentBookStorage implements BookshelfStorage {
 	@Override
 	public Book createBook(Book book) {
 		book.setId(UUID.randomUUID().toString());
-		bookRepository.save(book);
-		return bookRepository.findById(book.getId()).orElseThrow();
+		return bookRepository.save(book);
 	}
 
 	@Override

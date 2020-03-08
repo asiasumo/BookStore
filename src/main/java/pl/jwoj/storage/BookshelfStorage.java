@@ -1,10 +1,12 @@
 package pl.jwoj.storage;
 
+import org.springframework.stereotype.Service;
 import pl.jwoj.config.exceptions.BookNotFoundException;
 import pl.jwoj.domain.Book;
 
 import java.util.List;
 
+@Service
 public interface BookshelfStorage {
 
 	Book createBook(Book book);

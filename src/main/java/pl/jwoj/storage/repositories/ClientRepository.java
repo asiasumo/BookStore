@@ -1,4 +1,4 @@
-package pl.jwoj.storage;
+package pl.jwoj.storage.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import pl.jwoj.domain.Client;
