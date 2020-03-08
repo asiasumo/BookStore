@@ -1,5 +1,12 @@
 //display products
 class UI{
+    constructor(){
+        cart = Storage.getCart();
+        this.setCartValues(cart);
+        this.populateCart(cart);
+        cartBtn.addEventListener('click',this.showCart);
+        closeCartBtn.addEventListener('click',this.hideCart);
+    }
     displayProducts(products){
         let result = '';
         products.forEach(product => {
@@ -48,7 +55,7 @@ class UI{
     setCartValues(cart){
         let tempTotal = 0;
         let itemsTotal = 0;
-        cart.map(item =>{
+        cart.forEach(item =>{
             tempTotal += item.price * item.amount;
             itemsTotal += item.amount;
         })
@@ -75,13 +82,7 @@ class UI{
         cartOverlay.classList.add('transparentBcg');
         cartDOM.classList.add('showCart');
     }
-    setupAPP(){
-        cart = Storage.getCart();
-        this.setCartValues(cart);
-        this.populateCart(cart);
-        cartBtn.addEventListener('click',this.showCart);
-        closeCartBtn.addEventListener('click',this.hideCart);
-    }
+
     populateCart(cart){
         cart.forEach(item => this.addCartItem(item));
     }
@@ -123,8 +124,7 @@ class UI{
         })
     }
     clearCart(){
-        let cartItems = cart.map(item => String(item.id));
-        cartItems.forEach(id => this.removeItem(id));
+        cart.map(item => String(item.id)).forEach(id => this.removeItem(id));
         while(cartContent.children.length>0){
             cartContent.removeChild(cartContent.children[0])
         }
