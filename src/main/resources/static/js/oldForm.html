@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-center">
+                    <span class="nav-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+        <img src="E-Książka.png" alt="e-store logo">
+        <div class="cart-btn">
+                        <span class="nav-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+            <div class="cart-items">0</div>
+        </div>
+    </div>
+</nav>
+<header class="hero">
+    <div class="form">
+        <form>
+            <div>
+                <div>
+                    <label for="is-invoice">Faktura</label>
+                    <select class="form-control" name="is-invoice" id="is-invoice">
+                        <option value="option-2" selected="true" id="is-invoice-0">Nie</option>
+                        <option value="option-1" id="is-invoice-1">Tak</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="first-name">Imię<span>*</span></label>
+                    <input type="text">
+                </div>
+                <div class="formbuilder-text form-group field-last-name">
+                    <label for="last-name" class="formbuilder-text-label">Nazwisko<span class="formbuilder-required">*</span></label>
+                    <input type="text" class="form-control" name="last-name" access="false" id="last-name" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-text form-group field-e-mail">
+                    <label for="e-mail" class="formbuilder-text-label">Adres e-mail<span class="formbuilder-required">*</span>
+                    </label><input type="email" class="form-control" name="e-mail" access="false" id="e-mail" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-text form-group field-nip">
+                    <label for="nip" class="formbuilder-text-label">NIP</label>
+                    <input type="text" class="form-control" name="nip" access="false" id="nip">
+                </div>
+                <div class="formbuilder-text form-group field-company-name">
+                    <label for="company-name" class="formbuilder-text-label">Nazwa Firmy</label>
+                    <input type="text" class="form-control" name="company-name" access="false" id="company-name">
+                </div>
+                <div class="formbuilder-button form-group field-buy-btn"><button type="button" class="btn-default btn" name="buy-btn" access="false" style="default" id="buy-btn">Kup i Zapłać</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</header>
+</body>
+</html>

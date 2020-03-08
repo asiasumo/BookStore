@@ -91,6 +91,7 @@ class UI{
         cartDOM.classList.remove('showCart');
     }
     cartLogic(){
+        checkoutCartBtn.addEventListener("click",()=>{window.open('form.html','_self')});
         clearCartBtn.addEventListener("click",()=>{this.clearCart();});
         cartContent.addEventListener('click', event=>{
             if(event.target.classList.contains('remove-item')){
