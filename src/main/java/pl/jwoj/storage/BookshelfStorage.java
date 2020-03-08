@@ -14,4 +14,8 @@ public interface BookshelfStorage {
 	List<Book> getAllBooks();
 
 	List<Book> createBooks(List<Book> books);
+
+	void removeBook(String id);
+
+	void removeBooks(List<String> ids);
 }
