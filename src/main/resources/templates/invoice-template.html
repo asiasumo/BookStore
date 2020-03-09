@@ -1,28 +1,35 @@
-<html>
-    <head></head>
-    <style>
-        table { border:1px solid black };
-        td {border: 1px solid black};
-    </style>
-    <body>
-        <h4>Faktura nr: {numer_faktury}</h4>
-        <table>
-            <tr>
-                <td></td>
-                <td>asdfdf</td>
-            </tr>
-            <tr>
-                <td>dfldf;ld</td>
-                <td>asdfdf</td>
-            </tr>
-            <tr>
-                <td>dfldf;ld</td>
-                <td>asdfdf</td>
-            </tr>
-            <tr>
-                <td>dfldf;ld</td>
-                <td>asdfdf</td>
-            </tr>
-        </table>
-    </body>
-</html>
+
+    function getValue(array, fieldName) {
+        return array.find(el => el.field === fieldName).value
+ }
+
+
+ function submint(e){
+     const nodes = e.parentElement.getElementsByTagName("input")
+     const isInvoice = e.parentElement.getElementsByTagName("select").isInvoice.value
+     const values = Array.from(nodes).map(el => {return {field:el.name,value:el.value}})
+     fetch("transactions/addTransaction", {
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         method:'POST',
+         mode:'cors',
+         body: JSON.stringify(
+             {
+"books": Storage.getCart(),
+"client": {
+ "companyName": getValue(values, 'companyName'),
+ "email": getValue(values, 'email'),
+ "id": "",
+ "name": getValue(values, 'firstname'),
+ "nip": getValue(values, 'nip'),
+ "surname": getValue(values, 'surname')
+},
+"id": "string",
+"invoice": isInvoice,
+"price": 0
+ })
+ })
+ .then(response => response.json())
+ .then(json => console.log(json))
+}

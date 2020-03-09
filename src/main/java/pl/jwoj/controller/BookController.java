@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class BookController {
 
+	@Autowired
 	private BookService bookService;
 
 	@PostMapping("/create")
