@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -36,7 +37,7 @@ public class InMemoryBookshelfStorage implements BookshelfStorage {
 
 	@Override
 	public Book createBook(Book book) {
-		books.put(book.getIsbn(), book);
+		books.put(UUID.randomUUID().toString(), book);
 		return book;
 	}
 
@@ -58,5 +59,15 @@ public class InMemoryBookshelfStorage implements BookshelfStorage {
 	public List<Book> createBooks(List<Book> books) {
 		books.forEach(this::createBook);
 		return books;
+	}
+
+	@Override
+	public void removeBook(String id) {
+		books.remove(id);
+	}
+
+	@Override
+	public void removeBooks(List<String> ids) {
+		ids.forEach(this::removeBook);
 	}
 }
