@@ -63,6 +63,7 @@ class UI{
         if (tempTotal > 199.99){tempTotal-=20}
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
         cartItems.innerText = itemsTotal;
+        localStorage.setItem("price",JSON.stringify(tempTotal.toFixed(2)));
     }
     addCartItem(item){
         const div = document.createElement('div');

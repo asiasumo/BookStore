@@ -30,7 +30,7 @@ function sendForm(e) {
                 },
                 "id": "string",
                 "invoice": isInvoice,
-                "price": 0
+                "price":Storage.getPrice()
             })
         })
         .then(response => response.json())

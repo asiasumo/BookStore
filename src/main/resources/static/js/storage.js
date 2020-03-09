@@ -13,4 +13,7 @@ class Storage{
     static getCart(){
         return localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[];
     }
+    static getPrice(){
+        return localStorage.getItem("price")?JSON.parse(localStorage.getItem("price")):null;
+    }
 }
