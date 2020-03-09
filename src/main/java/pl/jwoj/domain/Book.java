@@ -3,18 +3,17 @@ package pl.jwoj.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@EqualsAndHashCode
 public class Book {
 	@Id
 	private String id;
@@ -27,7 +26,7 @@ public class Book {
 	private String cover;
 	@JsonIgnore
 	private boolean isOnSale;
-	@ManyToMany(mappedBy = "books")
+	@ManyToMany(mappedBy = "books", fetch = FetchType.EAGER)
 	@JsonIgnore
 	private List<Transaction> transactions;
 }

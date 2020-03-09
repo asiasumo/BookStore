@@ -17,13 +17,13 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class BooksControllerTest {
+public class BooksServiceTest {
 
 	@TestConfiguration
-	static class EmployeeServiceImplTestContextConfiguration {
+	static class BooksServiceTestContextConfiguration {
 
 		@Bean
-		public BookService employeeService() {
+		public BookService bookServiceConf() {
 			return new BookService();
 		}
 
@@ -42,7 +42,7 @@ public class BooksControllerTest {
 
 		Book createdBook = bookService.createBook(book);
 
-		Assert.assertEquals(book.getId(), createdBook.getId());
+		Assert.assertEquals(book, createdBook);
 
 	}
 
