@@ -33,7 +33,7 @@ public class BooksServiceTest {
 	private BookService bookService;
 
 	@Test
-	public void isBookCreated() {
+	public void bookIsCreated() {
 		List<Transaction> transactions = new ArrayList();
 
 		Book book = new Book("222","9788328073357","A road to the happy life",

@@ -22,7 +22,7 @@ public class TransactionServiceTest {
 	private TransactionService transactionService;
 
 	@Test
-	public void isTransactionCreated() {
+	public void transactionIsCreated() {
 		List<Book> books = new ArrayList<>();
 		books.add(new Book("222","9788328073357","A road to the happy life",
 						"Happy life","Mike Prets",32.99f,
