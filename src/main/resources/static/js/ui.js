@@ -56,9 +56,11 @@ class UI{
         let tempTotal = 0;
         let itemsTotal = 0;
         cart.forEach(item =>{
-            tempTotal += item.price * item.amount;
+            let itemDiscount = Math.floor(item.amount/5)
+            tempTotal += (item.price * item.amount) - (item.price *itemDiscount);
             itemsTotal += item.amount;
         })
+        if (tempTotal > 199.99){tempTotal-=20}
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
         cartItems.innerText = itemsTotal;
     }
