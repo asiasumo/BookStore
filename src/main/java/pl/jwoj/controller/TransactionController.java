@@ -19,7 +19,7 @@ public class TransactionController {
 	@Autowired
 	private TransactionService transactionService;
 
-	@PostMapping(value = "", consumes = "application/json", produces = "application/json")
+	@PostMapping(value = "addTransaction")
 	public Transaction fulfillTransaction(@RequestBody Transaction transaction) {
 		return transactionService.addTransaction(transaction);
 	}
