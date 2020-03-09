@@ -30,4 +30,12 @@ public class BookService {
 	public List<Book> createBooks(List<Book> books) {
 		return bookshelfStorage.createBooks(books);
 	}
+
+	public void removeBook(String id) {
+		bookshelfStorage.removeBook(id);
+	}
+
+	public void removeBooks(List<String> ids) {
+		bookshelfStorage.removeBooks(ids);
+	}
 }

@@ -51,21 +51,19 @@ public class PersistentBookStorage implements BookshelfStorage {
 		return getBooksById(books.stream().map(Book::getId).collect(Collectors.toList()));
 	}
 
+	@Override
+	public void removeBook(String id) {
+		bookRepository.delete(bookRepository.findById(id).orElse(new Book()));
+	}
+
+	@Override
+	public void removeBooks(List<String> ids) {
+		ids.forEach(this::removeBook);
+	}
+
 	private List<Book> getBooksById(List<String> ids) {
 		List<Book> books = new ArrayList<>();
 		bookRepository.findAllById(ids).forEach(books::add);
 		return books;
-	}
-
-	private void prepopulateStorage() {
-		ObjectMapper om = new ObjectMapper();
-		URL url = PersistentBookStorage.class.getResource("/static/tempBooks.json");
-		List<Book> values = null;
-		try {
-			values = om.readValue(url, new TypeReference<List<Book>>() {});
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		values.forEach(this::createBook);
 	}
 }

@@ -24,7 +24,7 @@ public class BookController {
 		return bookService.createBook(book);
 	}
 
-	@PostMapping(value = "/createBatch", consumes = "application/json", produces = "application/json")
+	@PostMapping("/createBatch")
 	public List<Book> createBooks(@RequestBody List<Book> books) {
 		return bookService.createBooks(books);
 	}
@@ -39,5 +39,13 @@ public class BookController {
 		return bookService.getAllBooks();
 	}
 
+	@PostMapping("/delete/{id}")
+	public void deleteBook(@PathVariable("id") String id) {
+		bookService.removeBook(id);
+	}
 
+	@PostMapping("/deleteBatch")
+	public void deleteBook(@RequestBody List<String> ids) {
+		bookService.removeBooks(ids);
+	}
 }
