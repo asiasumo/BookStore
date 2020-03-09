@@ -5,6 +5,14 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Form</title>
     <script src="https://kit.fontawesome.com/1fe6e44c32.js" crossorigin="anonymous"></script>
+    <script src="js/storage.js"></script>
+    <script>
+    function submit(e){
+        const nodes = e.parentElement.getElementByTagName("input")
+        const values = Array.from(nodes).map(el => {return {field:el.name,value:el.value}})
+        console.log(values,Storage)
+    }
+</script>
 </head>
 <body>
     <nav class="navbar">
@@ -45,8 +53,7 @@
                 <label for="nipCode">NIP</label>
                 <input type="text" id="nipCode" name="nip" placeholder="NIP..">
 
-
-                <input type="submit" value="Kup i Zapłać">
+                <input type="button" value="Kup i Zapłać" onclick="submit(this)">
             </form>
         </div>
     </header>

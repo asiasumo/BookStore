@@ -263,7 +263,7 @@ body {
 input[type=submit]:hover {
   background-color: #f09d5140;
 }
-input[type=submit] {
+input[type=button] {
   width: 100%;
   background-color: #f09d51;
   color: black;
